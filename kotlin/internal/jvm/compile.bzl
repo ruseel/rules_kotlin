@@ -421,7 +421,8 @@ def _run_kt_builder_action(
         arguments = [args],
         progress_message = progress_message,
         env = {
-            "LC_CTYPE": "en_US.UTF-8",  # For Java source files
+            "LC_ALL": "C.UTF-8", 
+            "LC_CTYPE": "C.UTF-8",  # For Java source files
             "REPOSITORY_NAME": _utils.builder_workspace_name(ctx),
         },
     )
